@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+
+{% block content%}
+
+<div class="container">
+    <br>
+    <br>
+    <table class="table">
+        <thead class="table-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Designation</th>
+            <th scope="col">Location</th>
+            <th scope="col">Button</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for data in Employee %}
+        <tr>
+            <th scope="row">{{data.id}}</th>
+            <td>{{data.first_name}}</a> </td>
+            <td>{{data.last_name}}</td>
+            <td>{{data.designation}}</td>
+            <td>{{data.location}}</td>
+            <td><button type="button" class="btn btn-secondary">Button</button></td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    
+</div>
+
+
+{% endblock%}
